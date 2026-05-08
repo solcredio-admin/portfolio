@@ -1,5 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     margin: 0;
     padding: 20px;
     line-height: 1.7;
@@ -8,6 +10,7 @@ body {
     text-align: center;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    font-weight: 400;
 }
 
 main {
@@ -24,14 +27,17 @@ header {
 header p {
     color: #bdbdbd;
     margin-top: 8px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
 }
 
 .small-text {
-    font-size: 0.75rem;
-    letter-spacing: 4px;
+    font-size: 0.72rem;
+    letter-spacing: 5px;
     text-transform: uppercase;
     color: #8f8f8f;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
 section {
@@ -40,43 +46,48 @@ section {
 
 .project {
     border: 1px solid #2a2a2a;
-    border-radius: 8px;
-    padding: 22px;
+    border-radius: 10px;
+    padding: 24px;
     margin-top: 18px;
     background-color: #050505;
     transition: border-color 0.2s ease,
-                transform 0.2s ease;
+                transform 0.2s ease,
+                background-color 0.2s ease;
 }
 
 .project:hover {
     border-color: #ffffff;
+    background-color: #090909;
     transform: translateY(-2px);
 }
 
 h1 {
-    font-size: 2.4rem;
-    font-weight: 600;
+    font-size: 2.6rem;
+    font-weight: 700;
     margin-bottom: 10px;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+    letter-spacing: 0.4px;
 }
 
 h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    letter-spacing: 0.2px;
 }
 
 p {
     color: #d0d0d0;
     margin: 0 auto;
     max-width: 720px;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 a {
@@ -96,10 +107,14 @@ a:hover {
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     h2 {
         font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1.03rem;
     }
 }
