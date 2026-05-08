@@ -1,131 +1,366 @@
+```html id="9xk21p"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Solcredio — Lyndon Pascua Jr.</title>
+
+    <meta name="description" content="Remote IT Support, MSP Operations, Systems Administration, and Microsoft 365 portfolio of Lyndon Pascua Jr.">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <p class="small-text">SOLCREDIO</p>
-        <h1>Lyndon Pascua Jr.</h1>
-        <p>
-            IT Support • Systems Administration • Homelab Enthusiast
-        </p>
+    <!-- MOBILE MENU TOGGLE -->
+    <input type="checkbox" id="menu-toggle">
+
+    <header class="topbar">
+
+        <div class="logo">
+            SOLCREDIO
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="desktop-nav">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- MOBILE HAMBURGER -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
     </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <main>
 
-        <section>
+        <!-- HERO -->
+        <section class="hero">
+
+            <p class="small-text">REMOTE IT SUPPORT • MSP OPERATIONS • SYSTEMS ADMINISTRATION</p>
+
+            <h1>
+                Lyndon Pascua Jr.
+            </h1>
+
+            <p class="hero-description">
+                IT professional focused on MSP operations, remote technical support,
+                systems administration, Microsoft 365 management, and infrastructure support.
+                Experienced in handling support environments, endpoint management,
+                virtualization, documentation systems, and modern IT operations.
+            </p>
+
+            <div class="cta-group">
+                <a href="mailto:admin@solcredio.com" class="button">
+                    Contact Me
+                </a>
+
+                <a href="pascuajr-resume.pdf" download class="button secondary">
+                    Download Resume
+                </a>
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+
             <h2>About</h2>
 
-            <p>
-                I specialize in IT support, systems administration, and self-hosted infrastructure.
-                I enjoy building efficient systems, troubleshooting complex environments,
-                and continuously expanding my technical knowledge through hands-on projects.
-            </p>
+            <div class="project">
+                <p>
+                    I specialize in remote IT support, MSP operations,
+                    endpoint management, and systems administration with hands-on experience
+                    supporting modern business environments.
+                </p>
 
-            <p>
-                My experience includes working with MSP environments, remote support,
-                virtualization, endpoint management, documentation systems, and security tools.
-                I value clean workflows, reliability, automation, and practical problem-solving.
-            </p>
+                <p>
+                    My background combines technical operations,
+                    communication, customer support, infrastructure management,
+                    and creative problem-solving — allowing me to work effectively
+                    with both users and technical systems.
+                </p>
+
+                <p>
+                    I focus on maintaining reliable systems,
+                    improving operational workflows,
+                    and delivering responsive technical support across distributed environments.
+                </p>
+            </div>
+
         </section>
 
-        <section>
-            <h2>Core Skills</h2>
+        <!-- EXPERIENCE -->
+        <section id="experience">
 
-            <div class="project">
-                <h3>Systems & Infrastructure</h3>
-                <p>
-                    Windows Administration, Active Directory, Proxmox, Docker,
-                    NAS Management, Virtualization, Remote Access Solutions,
-                    Network Troubleshooting, Backup Management, SSH, Linux Administration.
-                </p>
-            </div>
+            <h2>Experience</h2>
 
-            <div class="project">
-                <h3>MSP & IT Operations</h3>
-                <p>
-                    Autotask, HaloPSA, ConnectWise, Syncro, NinjaOne,
-                    N-able, Datto RMM, Snipe-IT, IT Glue, Hudu,
-                    Endpoint Management, Documentation, Ticketing Systems,
-                    User Provisioning, and Technical Support.
-                </p>
-            </div>
+            <details class="project">
+                <summary>
+                    MSP Service Desk Technician • 2024 – Present
+                </summary>
 
-            <div class="project">
-                <h3>Security & Email Platforms</h3>
-                <p>
-                    ThreatLocker, Huntress, SentinelOne, AutoElevate,
-                    Microsoft 365 Administration, Proofpoint,
-                    Email Security, and Access Management.
-                </p>
-            </div>
+                <div class="dropdown-content">
+
+                    <p>
+                        Supporting managed service provider environments with hands-on experience
+                        in service desk operations, endpoint management, remote support,
+                        troubleshooting, Microsoft 365 administration, documentation,
+                        and infrastructure support.
+                    </p>
+
+                    <div class="tags">
+                        <span>Microsoft 365</span>
+                        <span>HaloPSA</span>
+                        <span>Autotask</span>
+                        <span>ConnectWise</span>
+                        <span>Syncro</span>
+                        <span>NinjaOne</span>
+                        <span>N-able</span>
+                        <span>Datto RMM</span>
+                        <span>ThreatLocker</span>
+                        <span>SentinelOne</span>
+                        <span>Huntress</span>
+                        <span>IT Glue</span>
+                        <span>Hudu</span>
+                        <span>Snipe-IT</span>
+                    </div>
+
+                </div>
+            </details>
+
+            <details class="project">
+                <summary>
+                    Marketing Head • NPMCN Digital Trading • 2022 – 2023
+                </summary>
+
+                <div class="dropdown-content">
+
+                    <p>
+                        Led marketing initiatives for a fast-growing eCommerce startup
+                        focused on digital marketplace operations across platforms such as
+                        Facebook Marketplace, TikTok Shop, Shopee, and Lazada.
+                    </p>
+
+                    <p>
+                        Managed branding, operations coordination,
+                        digital campaigns, content direction,
+                        and customer-focused growth strategies.
+                    </p>
+
+                </div>
+            </details>
+
+            <details class="project">
+                <summary>
+                    Photographer • Great Image • 2020 – 2021
+                </summary>
+
+                <div class="dropdown-content">
+
+                    <p>
+                        Worked across multiple branches of
+                        [Great Image](https://greatimage.com.ph/?utm_source=chatgpt.com),
+                        one of the largest photography studio brands in the Philippines
+                        with more than 85 branches nationwide.
+                    </p>
+
+                    <p>
+                        Delivered customer-facing creative services,
+                        handled studio operations,
+                        and maintained consistent service quality across multiple locations.
+                    </p>
+
+                </div>
+            </details>
+
+            <details class="project">
+                <summary>
+                    Corporate Communications Intern • Light Rail Manila Corporation • 2018 – 2019
+                </summary>
+
+                <div class="dropdown-content">
+
+                    <p>
+                        Assisted with corporate communications,
+                        administrative coordination,
+                        documentation, internal communications,
+                        event planning, and media coverage.
+                    </p>
+
+                    <p>
+                        Supported public relations activities,
+                        content production,
+                        and organizational communications workflows.
+                    </p>
+
+                </div>
+            </details>
+
         </section>
 
+        <!-- EDUCATION -->
         <section>
-            <h2>Projects</h2>
 
-            <div class="project">
-                <h3>Homelab Infrastructure</h3>
-                <p>
-                    Built and maintained a self-hosted homelab environment
-                    focused on virtualization, storage management,
-                    remote access, automated backups, and containerized applications.
-                    This environment serves as a platform for testing,
-                    experimentation, and continuous learning.
-                </p>
-            </div>
+            <h2>Education</h2>
 
-            <div class="project">
-                <h3>Portfolio Website</h3>
-                <p>
-                    Designed and maintained a minimalist personal portfolio
-                    focused on simplicity, readability, and responsive design.
-                    Built using lightweight HTML and CSS with an emphasis
-                    on clean structure and performance.
-                </p>
-            </div>
+            <details class="project">
+                <summary>
+                    Lyceum of the Philippines University – Cavite
+                </summary>
 
-            <div class="project">
-                <h3>Remote Support & Administration</h3>
-                <p>
-                    Managed and supported client systems using remote administration tools,
-                    endpoint management platforms, and documentation systems.
-                    Assisted with troubleshooting, deployment, onboarding,
-                    monitoring, and operational support across multiple environments.
-                </p>
-            </div>
+                <div class="dropdown-content">
+
+                    <p>
+                        Bachelor of Arts in Communication
+                        Major in Broadcasting • 2016 – 2019
+                    </p>
+
+                    <div class="tags">
+                        <span>Public Relations Officer</span>
+                        <span>Technical Director</span>
+                        <span>Creatives Committee</span>
+                        <span>Student Government</span>
+                    </div>
+
+                </div>
+            </details>
+
         </section>
 
-        <section>
-            <h2>Experience Focus</h2>
+        <!-- SKILLS -->
+        <section id="skills">
 
-            <p>
-                I have hands-on experience supporting managed environments,
-                maintaining systems, documenting processes, and assisting users
-                across a variety of platforms and technologies.
-            </p>
+            <h2>Tools & Platforms</h2>
 
-            <p>
-                I am continuously improving my technical skillset through practical projects,
-                self-hosting, research, and real-world troubleshooting.
-            </p>
+            <div class="tags-container">
+
+                <span>Microsoft 365</span>
+                <span>Windows Administration</span>
+                <span>Docker</span>
+                <span>Proxmox</span>
+                <span>Linux</span>
+                <span>NAS Management</span>
+                <span>Remote Support</span>
+                <span>Active Directory</span>
+                <span>ThreatLocker</span>
+                <span>SentinelOne</span>
+                <span>Huntress</span>
+                <span>Proofpoint</span>
+                <span>NinjaOne</span>
+                <span>Datto RMM</span>
+                <span>ConnectWise</span>
+                <span>HaloPSA</span>
+                <span>IT Glue</span>
+                <span>Hudu</span>
+                <span>Syncro</span>
+                <span>Snipe-IT</span>
+                <span>SSH</span>
+                <span>Virtualization</span>
+                <span>Networking</span>
+                <span>Endpoint Management</span>
+
+            </div>
+
         </section>
 
-        <section>
+        <!-- SERVICES -->
+        <section id="services">
+
+            <h2>Services</h2>
+
+            <div class="project">
+                <div class="tags-container">
+                    <span>Remote IT Support</span>
+                    <span>MSP Service Desk</span>
+                    <span>Microsoft 365 Administration</span>
+                    <span>Endpoint Management</span>
+                    <span>Systems Administration</span>
+                    <span>Docker Deployments</span>
+                    <span>Homelab Setup</span>
+                    <span>NAS Management</span>
+                    <span>Documentation Systems</span>
+                    <span>Technical Troubleshooting</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+
             <h2>Contact</h2>
 
-            <p>Email: admin@solcredio.com</p>
-            <p>Location: Cavite, Philippines</p>
-            <p>Upwork: Available for freelance and remote opportunities</p>
+            <div class="project">
+
+                <p>
+                    Available for remote IT support,
+                    MSP operations,
+                    service desk,
+                    systems administration,
+                    and Microsoft 365 opportunities.
+                </p>
+
+                <div class="socials">
+
+                    <a href="mailto:admin@solcredio.com">
+                        admin@solcredio.com
+                    </a>
+
+                    <a href="https://www.upwork.com/freelancers/~018e90d294e8a6b537" target="_blank">
+                        Upwork
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/solcredio-admin" target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+
+            <a href="https://www.upwork.com/freelancers/~018e90d294e8a6b537"
+               target="_blank"
+               class="button">
+                Hire Me on Upwork
+            </a>
+
         </section>
 
     </main>
 
+    <footer>
+        © 2026 Solcredio — Lyndon Pascua Jr.
+    </footer>
+
 </body>
 </html>
+```
