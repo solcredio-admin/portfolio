@@ -1,3 +1,4 @@
+```css id="a81k2m"
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 
 html {
@@ -6,43 +7,56 @@ html {
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: #0d0d0d;
-    color: #d8d8d8;
+    background: #0f0f0f;
+    color: #d6d6d6;
     font-family: 'Proxima Nova', sans-serif;
     line-height: 1.7;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
 
-/* MAIN LAYOUT */
+/* =========================
+   LAYOUT
+========================= */
 
 main {
     width: 100%;
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 120px 24px 80px;
 }
 
-/* TOPBAR */
+section {
+    margin-bottom: 72px;
+}
+
+/* =========================
+   TOPBAR
+========================= */
 
 .topbar {
     position: fixed;
     top: 0;
+    left: 0;
+
     width: 100%;
     height: 72px;
-    padding: 0 24px;
-    background: rgba(13, 13, 13, 0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #1c1c1c;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: 0 24px;
+
+    background: rgba(15, 15, 15, 0.94);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #1c1c1c;
 
     z-index: 999;
 }
@@ -50,23 +64,30 @@ main {
 .logo {
     font-size: 0.78rem;
     letter-spacing: 4px;
-    color: #a8a8a8;
-    font-weight: 600;
+    color: #9c9c9c;
+    font-weight: 700;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 .desktop-nav {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 26px;
 }
 
 .desktop-nav a,
 .mobile-nav a {
-    color: #bfbfbf;
+    color: #b9b9b9;
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
+    font-size: 0.94rem;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .desktop-nav a:hover,
@@ -74,7 +95,9 @@ main {
     color: #ffffff;
 }
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE NAV
+========================= */
 
 #menu-toggle {
     display: none;
@@ -96,70 +119,103 @@ main {
 
 .mobile-nav {
     display: none;
+
     position: fixed;
     top: 72px;
     left: 0;
+
     width: 100%;
-    background: #111111;
-    border-bottom: 1px solid #1c1c1c;
+
+    background: #121212;
+    border-bottom: 1px solid #1f1f1f;
+
     flex-direction: column;
-    text-align: center;
-    padding: 18px 0;
+    align-items: center;
+
+    padding: 12px 0;
+
     z-index: 998;
 }
 
 .mobile-nav a {
-    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 110px;
 }
 
 .small-text {
-    font-size: 0.75rem;
-    letter-spacing: 4px;
-    color: #8a8a8a;
-    margin-bottom: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
     text-transform: uppercase;
-    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #818181;
+
+    margin-bottom: 22px;
 }
 
 .hero h1 {
-    font-size: 3.4rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: #f2f2f2;
-    margin-bottom: 20px;
+
     letter-spacing: -2px;
+
+    color: #f2f2f2;
+
+    margin-bottom: 22px;
 }
 
 .hero-description {
     max-width: 720px;
     margin: 0 auto;
-    font-size: 1.05rem;
-    color: #b8b8b8;
+
+    color: #b7b7b7;
+
+    font-size: 1.03rem;
 }
 
-/* CTA BUTTONS */
+/* =========================
+   CTA BUTTONS
+========================= */
 
 .cta-group {
-    margin-top: 36px;
+    margin-top: 38px;
+
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
 .button {
-    display: inline-block;
-    padding: 12px 24px;
-    border: 1px solid #2c2c2c;
-    border-radius: 8px;
-    color: #f2f2f2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+
+    padding: 12px 22px;
+
+    background: #161616;
+
+    border: 1px solid #292929;
+    border-radius: 6px;
+
+    color: #efefef;
     text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+
     transition:
         background 0.2s ease,
         border-color 0.2s ease,
@@ -167,67 +223,87 @@ main {
 }
 
 .button:hover {
-    background: #181818;
-    border-color: #4a4a4a;
-    transform: translateY(-2px);
+    background: #1d1d1d;
+    border-color: #3d3d3d;
+    transform: translateY(-1px);
 }
 
 .secondary {
     background: transparent;
 }
 
-/* SECTIONS */
-
-section {
-    margin-bottom: 72px;
-}
+/* =========================
+   HEADINGS
+========================= */
 
 h2 {
     text-align: center;
-    font-size: 1.5rem;
-    color: #f2f2f2;
-    margin-bottom: 28px;
+
+    font-size: 1.55rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
+
+    color: #f1f1f1;
+
+    margin-bottom: 28px;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 
 .project {
-    background: #111111;
+    background: #141414;
+
     border: 1px solid #1f1f1f;
-    border-radius: 12px;
+    border-radius: 10px;
+
     padding: 26px;
+
     margin-top: 18px;
+
     transition:
         border-color 0.2s ease,
-        transform 0.2s ease,
-        background 0.2s ease;
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .project:hover {
-    border-color: #3a3a3a;
-    background: #141414;
-    transform: translateY(-2px);
+    background: #171717;
+    border-color: #343434;
+    transform: translateY(-1px);
 }
 
 .project p {
-    margin: 0 0 18px;
-    color: #bcbcbc;
+    color: #bdbdbd;
+    margin-bottom: 18px;
 }
 
 .project p:last-child {
     margin-bottom: 0;
 }
 
-/* DROPDOWNS */
+/* =========================
+   DROPDOWNS
+========================= */
+
+details {
+    overflow: hidden;
+}
 
 details summary {
     list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     cursor: pointer;
+
+    color: #efefef;
+
     font-size: 1rem;
     font-weight: 600;
-    color: #f0f0f0;
+
     transition: color 0.2s ease;
 }
 
@@ -239,59 +315,110 @@ details summary::-webkit-details-marker {
     display: none;
 }
 
-.dropdown-content {
-    margin-top: 22px;
-    border-top: 1px solid #222;
-    padding-top: 22px;
+/* PLUS / MINUS */
+
+details summary::after {
+    content: '+';
+
+    color: #8a8a8a;
+
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-/* TAGS */
+details[open] summary::after {
+    content: '−';
+    color: #ffffff;
+}
+
+details summary span {
+    margin-left: 10px;
+
+    color: #848484;
+
+    font-size: 0.88rem;
+    font-weight: 400;
+}
+
+.dropdown-content {
+    margin-top: 22px;
+    padding-top: 22px;
+
+    border-top: 1px solid #222222;
+}
+
+/* =========================
+   TAGS
+========================= */
 
 .tags,
 .tags-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     gap: 10px;
+
     margin-top: 20px;
 }
 
 .tags span,
 .tags-container span {
-    padding: 8px 14px;
-    border-radius: 999px;
-    background: #181818;
-    border: 1px solid #262626;
+    background: #1a1a1a;
+
+    border: 1px solid #282828;
+    border-radius: 4px;
+
+    padding: 7px 12px;
+
     color: #c8c8c8;
-    font-size: 0.88rem;
+
+    font-size: 0.84rem;
+    font-weight: 500;
+
     transition:
+        background 0.2s ease,
         border-color 0.2s ease,
         transform 0.2s ease;
 }
 
 .tags span:hover,
 .tags-container span:hover {
-    border-color: #444;
+    background: #1f1f1f;
+    border-color: #3b3b3b;
+
     transform: translateY(-1px);
 }
 
-/* SOCIALS */
+/* =========================
+   SOCIAL LINKS
+========================= */
 
 .socials {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+
     gap: 18px;
+
     margin-top: 24px;
 }
 
 .socials a {
     color: #d0d0d0;
     text-decoration: none;
+
     border-bottom: 1px solid #2d2d2d;
+
     padding-bottom: 2px;
-    transition: color 0.2s ease,
-                border-color 0.2s ease;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .socials a:hover {
@@ -299,29 +426,38 @@ details summary::-webkit-details-marker {
     border-color: #ffffff;
 }
 
-/* FINAL CTA */
+/* =========================
+   FINAL CTA
+========================= */
 
 .final-cta {
     text-align: center;
-    margin-top: 20px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid #1c1c1c;
-    color: #7f7f7f;
+
+    padding: 42px 20px;
+
+    border-top: 1px solid #1d1d1d;
+
+    color: #7d7d7d;
     font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
 
     main {
-        padding-top: 110px;
+        padding:
+            105px 20px 70px;
     }
 
     .desktop-nav {
@@ -336,13 +472,22 @@ footer {
         display: flex;
     }
 
+    .hero {
+        margin-bottom: 90px;
+    }
+
     .hero h1 {
-        font-size: 2.4rem;
-        line-height: 1.1;
+        font-size: 2.5rem;
+        line-height: 1.08;
     }
 
     .hero-description {
         font-size: 1rem;
+    }
+
+    .small-text {
+        letter-spacing: 2px;
+        line-height: 1.6;
     }
 
     .cta-group {
@@ -364,9 +509,10 @@ footer {
         gap: 14px;
     }
 
-    .small-text {
-        letter-spacing: 2px;
-        line-height: 1.5;
+    details summary {
+        align-items: flex-start;
+        gap: 10px;
     }
 
 }
+```
