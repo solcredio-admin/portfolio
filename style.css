@@ -212,7 +212,7 @@ section {
 
 .hero-name {
     font-size: clamp(3.2rem, 10vw, 7.5rem);
-    font-weight: 700;
+    font-weight: 100;
     letter-spacing: 0.12em;
     line-height: 1.0;
     color: #f0f0f0;
