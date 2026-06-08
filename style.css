@@ -28,7 +28,7 @@ main {
     width: 100%;
     max-width: 920px;
     margin: 0 auto;
-    padding: 120px 24px 80px;
+    padding: 0 24px 80px;
 }
 
 section {
@@ -148,8 +148,132 @@ section {
 ========================= */
 
 .hero {
-    text-align: center;
     margin-bottom: 110px;
+    /* remove old padding — handled by hero-fullpage */
+}
+
+.hero-fullpage {
+    position: relative;
+
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    height: 100vh;
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 0 24px;
+
+    /* Dark overlay on top of a background image; falls back gracefully */
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(10,10,10,0.55) 0%,
+            rgba(10,10,10,0.72) 60%,
+            rgba(10,10,10,0.92) 100%
+        ),
+        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80')
+        center/cover no-repeat;
+
+    /* subtle grain */
+    isolation: isolate;
+}
+
+.hero-fullpage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #787878;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.1s;
+}
+
+.hero-name {
+    font-size: clamp(3.2rem, 10vw, 7.5rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.0;
+    color: #f0f0f0;
+    margin-bottom: 26px;
+    position: relative;
+    z-index: 2;
+
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.25s;
+}
+
+.hero-tagline {
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #7a7a7a;
+    margin-bottom: 42px;
+    position: relative;
+    z-index: 2;
+
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.4s;
+}
+
+.hero-fullpage .cta-group {
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.55s;
+}
+
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+
+    animation: bounce 2.4s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.4; }
+    50%       { transform: translateX(-50%) translateY(6px); opacity: 0.9; }
 }
 
 .small-text {
@@ -160,17 +284,6 @@ section {
     letter-spacing: 4px;
 
     color: #818181;
-
-    margin-bottom: 22px;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-
-    letter-spacing: -2px;
-
-    color: #f2f2f2;
 
     margin-bottom: 22px;
 }
@@ -458,7 +571,7 @@ footer {
 
     main {
         padding:
-            105px 20px 70px;
+            0 20px 70px;
     }
 
     .desktop-nav {
@@ -477,9 +590,14 @@ footer {
         margin-bottom: 90px;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
-        line-height: 1.08;
+    .hero-name {
+        font-size: clamp(2.6rem, 14vw, 4.5rem);
+        letter-spacing: 0.06em;
+    }
+
+    .hero-eyebrow {
+        letter-spacing: 2px;
+        line-height: 1.6;
     }
 
     .hero-description {
