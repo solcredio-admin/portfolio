@@ -1,4 +1,4 @@
-# solcredio — Personal Portfolio
+# solcredio - Personal Portfolio
 
 Personal portfolio and professional landing page for **Lyndon Pascua Jr.**, a remote IT support specialist and MSP service desk technician based in the Philippines.
 
