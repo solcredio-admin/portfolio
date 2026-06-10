@@ -1,1 +1,69 @@
-I'm just learning how to make a website.
+# solcredio — Personal Portfolio
+
+Personal portfolio and professional landing page for **Lyndon Pascua Jr.**, a remote IT support specialist and MSP service desk technician based in the Philippines.
+
+Live at: [solcredio.com](https://solcredio.com)
+
+---
+
+## About
+
+This is a static, single-page portfolio website built with plain HTML and CSS — no frameworks, no build tools, no dependencies. Just a clean, dark-themed site that loads fast and works everywhere.
+
+---
+
+## Stack
+
+| Layer | Choice |
+|---|---|
+| Markup | HTML5 |
+| Styling | CSS3 (custom, no frameworks) |
+| Font | Proxima Nova via cdnfonts |
+| Hosting | Static |
+
+---
+
+## Features
+
+- Fixed topbar — transparent on the hero, transitions to opaque on scroll
+- Full-viewport hero with animated entrance (fade-up stagger)
+- Responsive layout with a CSS-only hamburger menu (no JS)
+- Collapsible experience and education entries using `<details>` / `<summary>`
+- Smooth scroll navigation
+- Downloadable resume link
+
+---
+
+## Sections
+
+- **Hero** — Full-screen landing with name, role, and CTAs
+- **About** — Short professional background
+- **Experience** — MSP Service Desk Technician, Marketing Head, Photographer, Corporate Communications Intern
+- **Education** — Lyceum of the Philippines University – Cavite (BA Communication, Broadcasting)
+- **Tools & Platforms** — Grouped by category: core systems, infrastructure, RMM/PSA tools, documentation, security
+- **Services** — What I'm available for
+- **Contact** — Email, Upwork, LinkedIn, GitHub
+
+---
+
+## Project Structure
+
+```
+/
+├── index.html        # Main page
+├── style.css         # All styles
+├── favicon.png       # Site icon
+└── pascuajr-resume.pdf   # Downloadable resume
+```
+
+---
+
+## Contact
+
+- **Email:** admin@solcredio.com
+- **Upwork:** [upwork.com/freelancers/~018e90d294e8a6b537](https://www.upwork.com/freelancers/~018e90d294e8a6b537)
+- **LinkedIn:** [linkedin.com/in/lyndon-pascua-jr-0a8520100](https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/)
+
+---
+
+© 2026 Solcredio — Lyndon Pascua Jr.
