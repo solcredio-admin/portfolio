@@ -78,6 +78,9 @@ section {
     letter-spacing: 4px;
     color: #9c9c9c;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* =========================
