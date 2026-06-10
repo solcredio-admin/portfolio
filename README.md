@@ -36,13 +36,13 @@ This is a static, single-page portfolio website built with plain HTML and CSS. J
 
 ## Sections
 
-- **Hero** — Full-screen landing with name, role, and CTAs
-- **About** — Short professional background
-- **Experience** — MSP Service Desk Technician, Marketing Head, Photographer, Corporate Communications Intern
-- **Education** — Lyceum of the Philippines University – Cavite (BA Communication, Broadcasting)
-- **Tools & Platforms** — Grouped by category: core systems, infrastructure, RMM/PSA tools, documentation, security
-- **Services** — What I'm available for
-- **Contact** — Email, Upwork, LinkedIn, GitHub
+- **Hero** - Full-screen landing with name, role, and CTAs
+- **About** - Short professional background
+- **Tools & Platforms** - Grouped by category: core systems, infrastructure, RMM/PSA tools, documentation, security
+- **Services** - What I'm available for
+- **Experience** - MSP Service Desk Technician, Marketing Head, Photographer, Corporate Communications Intern
+- **Education** - Lyceum of the Philippines University – Cavite (BA Communication, Broadcasting)
+- **Contact** - Email, Upwork, LinkedIn, GitHub
 
 ---
 
@@ -61,8 +61,8 @@ This is a static, single-page portfolio website built with plain HTML and CSS. J
 ## Contact
 
 - **Email:** admin@solcredio.com
-- **Upwork:** [upwork.com/freelancers/~018e90d294e8a6b537](https://www.upwork.com/freelancers/~018e90d294e8a6b537)
-- **LinkedIn:** [linkedin.com/in/lyndon-pascua-jr-0a8520100](https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/)
+- **Upwork:** [upwork.com](https://www.upwork.com/freelancers/~018e90d294e8a6b537)
+- **LinkedIn:** [linkedin.com](https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/)
 
 ---
 
