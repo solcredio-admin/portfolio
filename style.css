@@ -1,7 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 
+/* hide text on mobile */
 @media (max-width: 768px) {
     .logo span {
+        display: none;
+    }
+}
+
+/* hide icon on desktop */
+@media (min-width: 769px) {
+    .logo img {
         display: none;
     }
 }
