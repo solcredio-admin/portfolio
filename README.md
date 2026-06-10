@@ -8,7 +8,7 @@ Live at: [solcredio.com](https://solcredio.com)
 
 ## About
 
-This is a static, single-page portfolio website built with plain HTML and CSS — no frameworks, no build tools, no dependencies. Just a clean, dark-themed site that loads fast and works everywhere.
+This is a static, single-page portfolio website built with plain HTML and CSS. Just a clean, dark-themed site that loads fast and works everywhere.
 
 ---
 
@@ -17,18 +17,18 @@ This is a static, single-page portfolio website built with plain HTML and CSS �
 | Layer | Choice |
 |---|---|
 | Markup | HTML5 |
-| Styling | CSS3 (custom, no frameworks) |
-| Font | Proxima Nova via cdnfonts |
+| Styling | CSS3 |
+| Font | Proxima Nova |
 | Hosting | Static |
 
 ---
 
 ## Features
 
-- Fixed topbar — transparent on the hero, transitions to opaque on scroll
-- Full-viewport hero with animated entrance (fade-up stagger)
-- Responsive layout with a CSS-only hamburger menu (no JS)
-- Collapsible experience and education entries using `<details>` / `<summary>`
+- Fixed topbar - transparent on the hero, transitions to opaque on scroll
+- Full-viewport hero with animated entrance
+- Responsive layout with a CSS-only hamburger menu
+- Collapsible experience and education entries
 - Smooth scroll navigation
 - Downloadable resume link
 
