@@ -235,6 +235,7 @@ section {
 
 .hero-name {
     font-size: clamp(1.2rem, 7vw, 3.5rem);
+    font-family: 'Proxima Nova', sans-serif;
     font-weight: 100;
     letter-spacing: 0.12em;
     line-height: 1.0;
