@@ -60,7 +60,7 @@ This is a static, single-page portfolio website built with plain HTML and CSS. J
 
 ## Contact
 
-- **Email:** admin@solcredio.com
+- **Email:** lyndon.pascuajr@solcredio.com
 - **Upwork:** [upwork.com](https://www.upwork.com/freelancers/~018e90d294e8a6b537)
 - **LinkedIn:** [linkedin.com](https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/)
 
