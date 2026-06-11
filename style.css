@@ -79,6 +79,14 @@ section {
     text-decoration: none;
 }
 
+/* hide text on mobile */
+@media (max-width: 768px) {
+    .logo span {
+        display: none;
+    }
+}
+
+/* hide icon on desktop */
 @media (min-width: 769px) {
     .logo img {
         display: none;
@@ -594,10 +602,6 @@ footer {
     main {
         padding:
             0 20px 70px;
-    }
-
-    .logo span {
-        display: none;
     }
 
     .break {
