@@ -272,6 +272,10 @@ section {
     z-index: 2;
 }
 
+.break { 
+    display: none; 
+}
+
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -592,6 +596,10 @@ footer {
 
     .logo img {
         display: none;
+    }
+
+    .break {
+        display: block;    
     }
 
     .desktop-nav {
