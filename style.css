@@ -79,9 +79,11 @@ section {
     text-decoration: none;
 }
 
-.logo img {
+@media (min-width: 769px) {
+    .logo img {
         display: none;
     }
+}
 
 /* =========================
    NAVIGATION
