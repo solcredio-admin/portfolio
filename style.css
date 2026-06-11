@@ -253,7 +253,7 @@ section {
     margin-bottom: 26px;
     position: relative;
     z-index: 2;
-
+    white-space: nowrap;
     animation: fadeUp 1s ease both;
     animation-delay: 0.25s;
 }
