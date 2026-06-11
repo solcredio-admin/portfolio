@@ -79,6 +79,10 @@ section {
     text-decoration: none;
 }
 
+.logo img {
+        display: none;
+    }
+
 /* =========================
    NAVIGATION
 ========================= */
@@ -591,10 +595,6 @@ footer {
     }
 
     .logo span {
-        display: none;
-    }
-
-    .logo img {
         display: none;
     }
 
