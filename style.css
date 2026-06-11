@@ -327,6 +327,12 @@ section {
     font-size: 1.03rem;
 }
 
+.bullet { display: inline; }
+
+@media (max-width: 768px) {
+    .bullet { display: none; }
+}
+
 /* =========================
    CTA BUTTONS
 ========================= */
