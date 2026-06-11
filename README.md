@@ -2,13 +2,13 @@
 
 Personal portfolio and professional landing page for **Lyndon Pascua Jr.**, a remote IT support specialist and MSP service desk technician based in the Philippines.
 
-Live at: [solcredio.com](https://solcredio.com)
+🌐 [solcredio.com](https://www.solcredio.com)
 
 ---
 
 ## About
 
-This is a static, single-page portfolio website built with plain HTML and CSS. Just a clean, dark-themed site that loads fast and works everywhere.
+Static single-page portfolio built with plain HTML and CSS - no frameworks, no build tools, no dependencies. Fast, responsive, and works everywhere.
 
 ---
 
@@ -19,41 +19,50 @@ This is a static, single-page portfolio website built with plain HTML and CSS. J
 | Markup | HTML5 |
 | Styling | CSS3 |
 | Font | Proxima Nova |
-| Hosting | Static |
+| Analytics | Google Analytics (gtag.js) |
+| Hosting | GitHub Pages |
 
 ---
 
 ## Features
 
-- Fixed topbar - transparent on the hero, transitions to opaque on scroll
-- Full-viewport hero with animated entrance
-- Responsive layout with a CSS-only hamburger menu
-- Collapsible experience and education entries
+- Full-viewport hero with fade-up entrance animations
+- Topbar transparent on landing, transitions to opaque on scroll
+- CSS-only hamburger menu (no JS) - icon only on mobile, text only on desktop
+- Collapsible experience and education entries via `<details>` / `<summary>`
 - Smooth scroll navigation
-- Downloadable resume link
+- Google Analytics with resume download and outbound link tracking
+- SEO optimized - meta tags, Open Graph, Twitter Card, JSON-LD structured data
+- `robots.txt` and `sitemap.xml` for search engine crawling
+- Google Search Console verified
 
 ---
 
 ## Sections
 
-- **Hero** - Full-screen landing with name, role, and CTAs
-- **About** - Short professional background
-- **Tools & Platforms** - Grouped by category: core systems, infrastructure, RMM/PSA tools, documentation, security
-- **Services** - What I'm available for
+- **Hero** - Full-screen landing with name, tagline, and CTAs
+- **About** - Professional background and what I bring to clients
 - **Experience** - MSP Service Desk Technician, Marketing Head, Photographer, Corporate Communications Intern
 - **Education** - Lyceum of the Philippines University – Cavite (BA Communication, Broadcasting)
+- **Tools & Platforms** - Core systems, infrastructure, RMM/PSA tools, documentation, security
+- **Services** - What I'm available for
 - **Contact** - Email, Upwork, LinkedIn, GitHub
 
 ---
 
-## Project Structure
+## File Structure
 
 ```
 /
-├── index.html        # Main page
-├── style.css         # All styles
-├── favicon.png       # Site icon
-└── pascuajr-resume.pdf   # Downloadable resume
+├── index.html                  # Main page
+├── style.css                   # All styles
+├── favicon.png                 # Site icon
+├── pascuajr-resume.pdf         # Downloadable resume
+├── robots.txt                  # Crawler instructions
+├── sitemap.xml                 # Sitemap for search engines
+├── google6b5e421518ff1881.html # Google Search Console verification
+├── CNAME                       # Custom domain config
+└── README.md
 ```
 
 ---
@@ -61,8 +70,9 @@ This is a static, single-page portfolio website built with plain HTML and CSS. J
 ## Contact
 
 - **Email:** lyndon.pascuajr@solcredio.com
-- **Upwork:** [upwork.com](https://www.upwork.com/freelancers/~018e90d294e8a6b537)
-- **LinkedIn:** [linkedin.com](https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/)
+- **Upwork:** [upwork.com/freelancers/lyndon-pascua-jr](https://www.upwork.com/freelancers/~018e90d294e8a6b537)
+- **LinkedIn:** [linkedin.com/in/lyndon-pascua-jr](https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/)
+- **GitHub:** [github.com/solcredio-admin](https://www.github.com/solcredio-admin)
 
 ---
 
