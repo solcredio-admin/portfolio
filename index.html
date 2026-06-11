@@ -424,12 +424,34 @@
     
 <script>
     const topbar = document.querySelector('.topbar');
+
+    // Scroll behavior
     window.addEventListener('scroll', () => {
         if (window.scrollY > 80) {
             topbar.classList.add('scrolled');
         } else {
             topbar.classList.remove('scrolled');
         }
+    });
+
+    // Add opaque when burger is open
+    const menuToggle = document.getElementById('menu-toggle');
+    menuToggle.addEventListener('change', () => {
+        if (menuToggle.checked) {
+            topbar.classList.add('scrolled');
+        } else if (window.scrollY <= 80) {
+            topbar.classList.remove('scrolled');
+        }
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.checked = false;
+            if (window.scrollY <= 80) {
+                topbar.classList.remove('scrolled');
+            }
+        });
     });
 </script>
     
