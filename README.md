@@ -38,6 +38,100 @@ Static single-page portfolio built with plain HTML and CSS - no frameworks, no b
 
 ---
 
+## 🚀 Quick Start
+
+### Pull the latest image
+
+```bash
+docker pull ghcr.io/solcredio-admin/portfolio:latest
+```
+
+### Create a `compose.yaml` file
+
+```yaml
+services:
+  portfolio:
+    image: ghcr.io/solcredio-admin/portfolio:latest
+    container_name: portfolio
+    restart: unless-stopped
+
+    ports:
+      - "3000:3000"
+
+    # Optional
+    # environment:
+    #   TZ: Asia/Manila
+```
+
+### Start the container
+
+```bash
+docker compose up -d
+```
+
+### Verify it is running
+
+```bash
+docker ps
+```
+
+### Access the application
+
+Open your browser and navigate to:
+
+```
+http://YOUR_SERVER_IP:3000
+```
+
+For example:
+
+```
+http://192.168.1.100:3000
+```
+
+---
+
+## 🔄 Updating
+
+Pull the latest image and recreate the container:
+
+```bash
+docker compose pull
+docker compose up -d
+```
+
+---
+
+## 🛑 Stopping
+
+```bash
+docker compose down
+```
+
+---
+
+## 🌐 Reverse Proxy (Optional)
+
+If you're using Caddy, Nginx Proxy Manager, Traefik, or another reverse proxy, point it to:
+
+```
+http://portfolio:3000
+```
+
+or
+
+```
+http://SERVER_IP:3000
+```
+
+You can then expose it with your own domain and HTTPS, for example:
+
+```
+https://portfolio.example.com
+```
+
+---
+
 ## Sections
 
 - **Hero** - Full-screen landing with name, tagline, and CTAs
