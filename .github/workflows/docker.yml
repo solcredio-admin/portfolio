@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - proxy
 
 permissions:
   contents: read
@@ -28,11 +29,16 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{ github.repository }}
+          # main -> :latest and :main, proxy -> :proxy; every build also gets :sha-<commit> for rollbacks
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=ref,event=branch
+            type=sha
 
       - name: Build and Push
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: |
-            ghcr.io/${{ github.repository }}:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
