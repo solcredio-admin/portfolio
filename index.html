@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Only this site and Google Analytics may load scripts; keep in sync with any assets added -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net; img-src 'self' data: https:; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+
+    <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-11H5KY3SCY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <script defer src="assets/js/analytics.js"></script>
+    <script defer src="assets/js/main.js"></script>
 
-      gtag('config', 'G-11H5KY3SCY');
-    </script>
-
-    <title>Lyndon Pascua Jr. | Remote IT Support & MSP Service Desk Technician</title>
+    <title>Lyndon Pascua Jr. | Remote IT Support &amp; MSP Service Desk Technician</title>
 
     <meta name="description" content="Lyndon Pascua Jr. — remote Tier 1/2 IT support and MSP service desk technician in the Philippines. Microsoft 365, Intune, Active Directory, RMM/PSA tools, endpoint security. Open to remote work.">
     <meta name="author" content="Lyndon Pascua Jr.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0f0f0f">
+    <meta name="theme-color" content="#F6F5F1">
     <meta name="google-site-verification" content="jPmyX5llTpMscDjGPYm3s2HqBQQJAq7jt-xHRVtLuXY" />
     <meta property="og:type" content="profile">
     <meta property="og:site_name" content="Solcredio">
@@ -32,13 +33,8 @@
     <meta name="twitter:description" content="Remote Tier 1/2 IT support and MSP service desk technician. Microsoft 365, endpoint management, RMM/PSA tools, endpoint security.">
     <meta name="twitter:image" content="https://www.solcredio.com/assets/favicon.png">
     <link rel="canonical" href="https://www.solcredio.com/">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/proxima-nova-2">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 </head>
 
 <body>
@@ -48,25 +44,25 @@
 
     <header class="topbar">
 
+        <nav class="nav nav-left" aria-label="Main">
+            <a href="#about">About</a>
+            <a href="#toolkit">Toolkit</a>
+            <a href="#experience">Experience</a>
+        </nav>
+
         <a href="/" class="logo" aria-label="Solcredio home">
-            <img src="assets/favicon.png" alt="" height="22" style="height: 22px; width: auto;">
-            <span>SOLCREDIO</span>
+            <img src="assets/img/logo-64.png" alt="" width="32" height="28">
+            <span>Solcredio</span>
         </a>
 
-        <!-- DESKTOP NAV -->
-        <nav class="desktop-nav" aria-label="Main">
-            <a href="#about">About</a>
-            <a href="#skills">Tools & Platforms</a>
-            <a href="#services">Services</a>
+        <nav class="nav nav-right" aria-label="Secondary">
             <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+            <a href="assets/pascuajr-resume.pdf" target="_blank" rel="noopener">Resume</a>
+            <a href="#contact" class="nav-cta">Hire me</a>
         </nav>
 
         <!-- MOBILE HAMBURGER -->
         <label for="menu-toggle" class="hamburger" aria-hidden="true">
-            <span></span>
             <span></span>
             <span></span>
         </label>
@@ -76,495 +72,348 @@
     <!-- MOBILE MENU -->
     <nav class="mobile-nav" aria-label="Mobile">
         <a href="#about">About</a>
-        <a href="#skills">Tools & Platforms</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
+        <a href="#toolkit">Toolkit</a>
         <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
+        <a href="assets/pascuajr-resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="#contact">Hire me</a>
     </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1 class="hero-name">Lyndon<br>Pascua Jr.</h1>
+        <p class="hero-role">Remote Tier 1/2 service desk technician for MSPs and the businesses they support</p>
+        <p class="links hero-links">
+            <a href="mailto:lyndon.pascuajr@solcredio.com?subject=Service%20desk%20opportunity">Start a conversation</a>
+            <a href="assets/pascuajr-resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
+        </p>
+    </section>
 
     <main>
 
-        <!-- HERO -->
-        <section class="hero">
-
-            <div class="hero-fullpage">
-                <p class="small-text hero-eyebrow">Keeping Technology Running <span class="break"> </span>So Business Can Keep Growing</p>
-                <h1 class="hero-name">LYNDON PASCUA JR.</h1>
-                <p class="hero-tagline">
-                    REMOTE IT SUPPORT<span class="bullet"> • </span><span class="break"></span>MSP SERVICE DESK<span class="bullet"> • </span><span class="break"></span>MICROSOFT 365
-                </p>
-                <div class="cta-group">
-                    <a href="mailto:lyndon.pascuajr@solcredio.com" class="button">Contact Me</a>
-                    <a href="assets/pascuajr-resume.pdf" target="_blank" rel="noopener" class="button secondary">View Resume</a>
-                </div>
-                <div class="hero-scroll-hint" aria-hidden="true">↓</div>
-            </div>
-
-        </section>
-
         <!-- ABOUT -->
-        <section id="about">
+        <section id="about" class="row">
 
-            <h2>About</h2>
+            <h2 class="label">About</h2>
 
-            <div class="project">
-                <p>
-                    I'm a remote IT support specialist and MSP service desk technician providing Tier 1/2 support
-                    to small businesses, mid-size companies, and enterprise environments across
-                    Microsoft 365, endpoint management platforms, and remote administration tools.
+            <div class="content">
+                <p class="statement">
+                    I already work in the PSA, RMM and security tools MSPs run on,
+                    so your clients' tickets get handled from first response to close
+                    with very little ramp-up.
                 </p>
 
-                <p>
-                    Day-to-day I work through PSA tools like HaloPSA, Autotask, and ConnectWise —
-                    handling everything from user onboarding and offboarding to outages, security incidents,
-                    and endpoint issues across distributed client environments. I'm comfortable owning a ticket
-                    from first response through to resolution, keeping communication clear and documentation tight.
+                <div class="prose">
+                    <p>
+                        Since 2024 I've worked Tier 1/2 queues for multiple MSP clients: Microsoft 365
+                        user and license administration, onboarding and offboarding, endpoint health and patching
+                        through RMM, MFA rollouts, EDR alerts, backups and network issues. I work inside
+                        HaloPSA, Autotask and ConnectWise, and I document as I go so the next tech
+                        doesn't start from zero.
+                    </p>
+
+                    <p>
+                        Before IT I studied communication and worked in customer-facing roles,
+                        which shows in how I handle clients: plain-language updates, calm under pressure,
+                        and no surprises. Outside work I run a Proxmox and Active Directory homelab
+                        to practise what I haven't yet met on a live ticket.
+                    </p>
+                </div>
+
+                <p class="links">
+                    <a href="#contact">Hire me</a>
+                    <a href="assets/pascuajr-resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
                 </p>
-
-                <p>
-                    My background in communication gives me an edge in client-facing support —
-                    I translate technical problems into plain language, manage expectations well under pressure,
-                    and maintain the kind of structured, process-driven approach that MSP environments demand.
-                    I'm currently freelancing and open to remote contracts and full-time opportunities.
-                </p>
-            </div>
-
-        </section>
-
-        <!-- SKILLS -->
-        <section id="skills">
-
-            <h2>Tools & Platforms</h2>
-
-            <div class="project">
-
-                <h3>Core Systems</h3>
-                    <div class="tags-container">
-                        <span>Microsoft 365</span>
-                        <span>Entra</span>
-                        <span>Exchange</span>
-                        <span>Intune</span>
-                        <span>Microsoft Defender</span>
-                        <span>SharePoint Online</span>
-                        <span>Windows Server</span>
-                        <span>Active Directory</span>
-                        <span>Remote Desktop Services</span>
-                    </div>
-
-                <h3>Infrastructure & Virtualization</h3>
-                    <div class="tags-container">
-                        <span>Proxmox</span>
-                        <span>Docker</span>
-                        <span>Hyper-V</span>
-                        <span>Synology</span>
-                        <span>TrueNAS</span>
-                        <span>Veeam Backup & Replication</span>
-                    </div>
-
-                <h3>Remote Management & MSP Tools</h3>
-                    <div class="tags-container">
-                        <span>NinjaOne</span>
-                        <span>Datto RMM</span>
-                        <span>N-able</span>
-                        <span>ScreenConnect</span>
-                        <span>Splashtop</span>
-                        <span>ConnectWise</span>
-                        <span>Autotask</span>
-                        <span>Syncro</span>
-                        <span>HaloPSA</span>
-                    </div>
-
-                 <h3>Security Tools</h3>
-                    <div class="tags-container">
-                        <span>ThreatLocker</span>
-                        <span>AutoElevate</span>
-                        <span>SentinelOne</span>
-                        <span>Duo Security</span>
-                        <span>Huntress</span>
-                        <span>Proofpoint</span>
-                        <span>Datto BCDR</span>
-                        <span>Datto SaaS Protect</span>
-                        <span>Vulscan</span>
-                        <span>VPenTest</span>
-                    </div>
-                
-                <h3>Documentation & Asset Management</h3>
-                    <div class="tags-container">
-                        <span>IT Glue</span>
-                        <span>Hudu</span>
-                        <span>Snipe-IT</span>
-                    </div>
-
             </div>
 
         </section>
 
         <!-- SERVICES -->
-        <section id="services">
+        <section id="services" class="row">
 
-            <h2>Services</h2>
+            <h2 class="label">What I take off your plate</h2>
 
-            <div class="project">
-                <div class="tags-container">
-                    <span>Remote IT Support</span>
-                    <span>MSP Service Desk</span>
-                    <span>Microsoft 365 Administration</span>
-                    <span>Endpoint Management</span>
-                    <span>Systems Administration</span>
-                    <span>Docker Deployments</span>
-                    <span>Homelab Setup</span>
-                    <span>NAS Management</span>
-                    <span>Documentation Systems</span>
-                    <span>Technical Troubleshooting</span>
+            <ul class="content services">
+                <li>Tier 1/2 tickets, owned to resolution</li>
+                <li>User onboarding and offboarding</li>
+                <li>Microsoft 365 and Entra administration</li>
+                <li>Mailbox, license and SharePoint requests</li>
+                <li>Endpoint health and patching via RMM</li>
+                <li>MFA and access control rollouts</li>
+                <li>EDR alert monitoring and escalation</li>
+                <li>Backup and recovery checks</li>
+                <li>Network troubleshooting</li>
+                <li>Documentation and knowledge base articles</li>
+            </ul>
+
+        </section>
+
+        <!-- TOOLKIT -->
+        <section id="toolkit" class="row">
+
+            <h2 class="label">Toolkit</h2>
+
+            <dl class="content toolkit">
+
+                <div class="tool-group">
+                    <dt><sup>9</sup>Core systems</dt>
+                    <dd>Microsoft 365, Entra, Exchange, Intune, Microsoft Defender, SharePoint Online, Windows Server, Active Directory, Remote Desktop Services</dd>
                 </div>
+
+                <div class="tool-group">
+                    <dt><sup>9</sup>Remote management &amp; PSA</dt>
+                    <dd>NinjaOne, Datto RMM, N-able, ScreenConnect, Splashtop, ConnectWise, Autotask, Syncro, HaloPSA</dd>
+                </div>
+
+                <div class="tool-group">
+                    <dt><sup>10</sup>Security</dt>
+                    <dd>ThreatLocker, AutoElevate, SentinelOne, Duo Security, Huntress, Proofpoint, Datto BCDR, Datto SaaS Protect, Vulscan, VPenTest</dd>
+                </div>
+
+                <div class="tool-group">
+                    <dt><sup>6</sup>Infrastructure &amp; virtualization</dt>
+                    <dd>Proxmox, Docker, Hyper-V, Synology, TrueNAS, Veeam Backup &amp; Replication</dd>
+                </div>
+
+                <div class="tool-group">
+                    <dt><sup>3</sup>Documentation &amp; assets</dt>
+                    <dd>IT Glue, Hudu, Snipe-IT</dd>
+                </div>
+
+            </dl>
+
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="row">
+
+            <h2 class="label">Experience</h2>
+
+            <div class="content entries">
+
+                <details class="entry">
+                    <summary>
+                        <span class="entry-years">2024 – Present</span>
+                        <span class="entry-title">Service Desk Technician</span>
+                        <span class="entry-org">Remote MSP clients</span>
+                    </summary>
+                    <div class="entry-body">
+                        <p>
+                            Working Tier 1/2 queues across multiple MSP client environments, resolving hardware,
+                            software and network issues remotely and keeping end users informed until the ticket closes.
+                        </p>
+                        <p>
+                            Running day-to-day Microsoft 365 administration: provisioning and offboarding users,
+                            managing licenses, configuring mailboxes and SharePoint Online. Keeping endpoints healthy,
+                            patched and compliant through RMM, rolling out MFA and access controls,
+                            and watching EDR alerts to catch problems early.
+                        </p>
+                        <p>
+                            Handling backup and recovery tasks and network troubleshooting, and writing
+                            knowledge base articles so recurring issues get solved faster by whoever picks them up next.
+                        </p>
+                        <p class="stack">Microsoft 365, HaloPSA, Autotask, ConnectWise, Syncro, NinjaOne, N-able, Datto RMM, ThreatLocker, SentinelOne, Huntress, IT Glue, Hudu, Snipe-IT</p>
+                    </div>
+                </details>
+
+                <details class="entry">
+                    <summary>
+                        <span class="entry-years">2022 – 2023</span>
+                        <span class="entry-title">Marketing Head</span>
+                        <span class="entry-org">NPMCN Digital Trading</span>
+                    </summary>
+                    <div class="entry-body">
+                        <p>
+                            Led marketing for a fast-growing eCommerce startup selling across
+                            Facebook Marketplace, TikTok Shop, Shopee and Lazada.
+                        </p>
+                        <p>
+                            Ran branding, campaigns and content, and coordinated between marketing, fulfilment
+                            and customer service teams. The same juggling of priorities and people
+                            I now bring to a busy service desk.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="entry">
+                    <summary>
+                        <span class="entry-years">2020 – 2021</span>
+                        <span class="entry-title">Photographer</span>
+                        <span class="entry-org">Great Image</span>
+                    </summary>
+                    <div class="entry-body">
+                        <p>
+                            Worked across multiple branches of Great Image, one of the largest photography
+                            studio brands in the Philippines with more than 85 branches nationwide.
+                        </p>
+                        <p>
+                            Served customers face to face every day, set up and maintained studio equipment,
+                            and kept service quality consistent from branch to branch.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="entry">
+                    <summary>
+                        <span class="entry-years">2018 – 2019</span>
+                        <span class="entry-title">Corporate Communications Intern</span>
+                        <span class="entry-org">Light Rail Manila Corporation</span>
+                    </summary>
+                    <div class="entry-body">
+                        <p>
+                            Assisted with corporate communications, administrative coordination,
+                            documentation, internal communications, event planning and media coverage.
+                        </p>
+                        <p>
+                            Supported public relations activities, content production
+                            and organizational communications workflows.
+                        </p>
+                    </div>
+                </details>
+
             </div>
 
         </section>
 
         <!-- PROJECTS -->
-<section id="projects">
+        <section id="projects" class="row">
 
-    <h2>Projects</h2>
-
-    <details class="project">
-        <summary>
-            Home Network Infrastructure - TP-Link Omada
-        </summary>
-        <div class="dropdown-content">
-            <p>
-                Built a managed home network using a TP-Link ER605 router, an Omada 8-port switch,
-                and an EAP110 outdoor access point - extending Wi-Fi coverage across the entire block.
-                The network controller runs self-hosted on a local server, managing all access points
-                from adoption through to configuration.
-            </p>
-            <p>
-                Handles static IP assignments, VLAN-style device segmentation, and connects
-                all house devices including smart TVs and desktop workstations.
-                All cabling is custom - hand-crimped RJ45 patch cables for the patch panel
-                and outdoor-rated Cat6 runs for longer distances.
-            </p>
-            <div class="tags">
-                <span>TP-Link ER605</span>
-                <span>Omada Controller</span>
-                <span>EAP110 Outdoor AP</span>
-                <span>Patch Panel</span>
-                <span>Cat6 Cabling</span>
-                <span>Static IP Management</span>
-                <span>Network Design</span>
+            <div class="label">
+                <h2>Homelab projects</h2>
+                <p class="label-note">Where I build and break things before they reach a client.</p>
             </div>
-        </div>
-    </details>
 
-    <details class="project">
-        <summary>
-            Proxmox Homelab - Virtualization & Self-Hosted Services
-        </summary>
-        <div class="dropdown-content">
-            <p>
-                Running a Proxmox hypervisor host managing multiple VMs and LXC containers.
-                Lab includes several Linux VMs for distro testing, a Windows Server instance,
-                and an Active Directory domain controller with domain-joined VMs for hands-on
-                practice with AD policies and user onboarding workflows.
-            </p>
-            <p>
-                A dedicated VM runs Docker hosting multiple self-hosted applications,
-                including IT documentation tools and MSP-simulated tools such as
-                a self-hosted remote desktop solution and a ticketing system -
-                replicating a real MSP environment for practice and skill development.
-            </p>
-            <div class="tags">
-                <span>Proxmox</span>
-                <span>Docker</span>
-                <span>Active Directory</span>
-                <span>Windows Server</span>
-                <span>Linux</span>
-                <span>LXC Containers</span>
-                <span>Self-Hosted Apps</span>
-                <span>Remote Desktop</span>
-                <span>Ticketing System</span>
-            </div>
-        </div>
-    </details>
+            <div class="content entries">
 
-    <details class="project">
-        <summary>
-            NAS Build - TrueNAS Scale & Media Server
-        </summary>
-        <div class="dropdown-content">
-            <p>
-                Repurposed a desktop into a NAS with four 1TB drives, testing multiple
-                operating systems including TrueNAS Core, OpenMediaVault, and CasaOS
-                before settling on TrueNAS Scale for its stability and app ecosystem.
-            </p>
-            <p>
-                Deployed a full media server stack built around Jellyfin with complete
-                arr automation — Sonarr, Radarr, and Prowlarr for content management,
-                and Overseerr for request handling. Also configured SMB shares
-                for local network access and remote access for off-site availability.
-            </p>
-            <div class="tags">
-                <span>TrueNAS Scale</span>
-                <span>Jellyfin</span>
-                <span>Sonarr</span>
-                <span>Radarr</span>
-                <span>Prowlarr</span>
-                <span>Overseerr</span>
-                <span>SMB Shares</span>
-                <span>Remote Access</span>
-            </div>
-        </div>
-    </details>
-
-</section>
-        
-        <!-- EXPERIENCE -->
-        <section id="experience">
-
-            <h2>Experience</h2>
-
-            <details class="project">
-                <summary>
-                    Service Desk Technician • Remote MSP Clients • 2024 – Present
-                </summary>
-
-                <div class="dropdown-content">
-
-                    <p>
-                        Providing Tier 1/2 technical support for multiple managed service provider (MSP) clients,
-                        resolving hardware, software, and network issues via remote support tools.
-                    </p>
-
-                    <p>
-                        Administering Microsoft 365 environments — user provisioning and offboarding,
-                        license management, mailbox configuration, and SharePoint Online.
-                        Managing endpoints through RMM platforms for system health, patching, and compliance,
-                        deploying MFA and identity/access controls, and monitoring EDR alerts.
-                    </p>
-
-                    <p>
-                        Performing network troubleshooting and backup and recovery management, and writing
-                        technical documentation and knowledge base articles to standardize troubleshooting
-                        and speed up resolution.
-                    </p>
-
-                    <div class="tags">
-                        <span>Microsoft 365</span>
-                        <span>HaloPSA</span>
-                        <span>Autotask</span>
-                        <span>ConnectWise</span>
-                        <span>Syncro</span>
-                        <span>NinjaOne</span>
-                        <span>N-able</span>
-                        <span>Datto RMM</span>
-                        <span>ThreatLocker</span>
-                        <span>SentinelOne</span>
-                        <span>Huntress</span>
-                        <span>IT Glue</span>
-                        <span>Hudu</span>
-                        <span>Snipe-IT</span>
+                <details class="entry">
+                    <summary>
+                        <span class="entry-title">Home network on TP-Link Omada</span>
+                    </summary>
+                    <div class="entry-body">
+                        <p>
+                            Built a managed home network using a TP-Link ER605 router, an Omada 8-port switch
+                            and an EAP110 outdoor access point, extending Wi-Fi coverage across the entire block.
+                            The network controller runs self-hosted on a local server, managing all access points
+                            from adoption through to configuration.
+                        </p>
+                        <p>
+                            Handles static IP assignments, VLAN-style device segmentation, and connects
+                            all house devices including smart TVs and desktop workstations.
+                            All cabling is custom: hand-crimped RJ45 patch cables for the patch panel
+                            and outdoor-rated Cat6 runs for longer distances.
+                        </p>
+                        <p class="stack">TP-Link ER605, Omada Controller, EAP110 Outdoor AP, patch panel, Cat6 cabling, static IP management, network design</p>
                     </div>
+                </details>
 
-                </div>
-            </details>
+                <details class="entry">
+                    <summary>
+                        <span class="entry-title">Proxmox virtualization lab</span>
+                    </summary>
+                    <div class="entry-body">
+                        <p>
+                            Running a Proxmox hypervisor host managing multiple VMs and LXC containers.
+                            The lab includes several Linux VMs for distro testing, a Windows Server instance,
+                            and an Active Directory domain controller with domain-joined VMs for hands-on
+                            practice with AD policies and user onboarding workflows.
+                        </p>
+                        <p>
+                            A dedicated VM runs Docker hosting multiple self-hosted applications,
+                            including IT documentation tools, a self-hosted remote desktop solution and a
+                            ticketing system, replicating a real MSP environment for practice and skill development.
+                        </p>
+                        <p class="stack">Proxmox, Docker, Active Directory, Windows Server, Linux, LXC containers, self-hosted apps, remote desktop, ticketing system</p>
+                    </div>
+                </details>
 
-            <details class="project">
-                <summary>
-                    Marketing Head • NPMCN Digital Trading • 2022 – 2023
-                </summary>
+                <details class="entry">
+                    <summary>
+                        <span class="entry-title">TrueNAS Scale storage and media server</span>
+                    </summary>
+                    <div class="entry-body">
+                        <p>
+                            Repurposed a desktop into a NAS with four 1TB drives, testing TrueNAS Core,
+                            OpenMediaVault and CasaOS before settling on TrueNAS Scale for its stability
+                            and app ecosystem.
+                        </p>
+                        <p>
+                            Deployed a media server stack built around Jellyfin with full arr automation:
+                            Sonarr, Radarr and Prowlarr for content management, and Overseerr for request handling.
+                            Also configured SMB shares for local network access and remote access for off-site availability.
+                        </p>
+                        <p class="stack">TrueNAS Scale, Jellyfin, Sonarr, Radarr, Prowlarr, Overseerr, SMB shares, remote access</p>
+                    </div>
+                </details>
 
-                <div class="dropdown-content">
-
-                    <p>
-                        Led marketing initiatives for a fast-growing eCommerce startup
-                        focused on digital marketplace operations across platforms such as
-                        Facebook Marketplace, TikTok Shop, Shopee, and Lazada.
-                    </p>
-
-                    <p>
-                        Managed branding, operations coordination,
-                        digital campaigns, content direction,
-                        and customer-focused growth strategies.
-                    </p>
-
-                </div>
-            </details>
-
-            <details class="project">
-                <summary>
-                    Photographer • Great Image • 2020 – 2021
-                </summary>
-
-                <div class="dropdown-content">
-
-                    <p>
-                        Worked across multiple branches of
-                        Great Image, one of the largest photography studio brands in the Philippines
-                        with more than 85 branches nationwide.
-                    </p>
-
-                    <p>
-                        Delivered customer-facing creative services,
-                        handled studio operations,
-                        and maintained consistent service quality across multiple locations.
-                    </p>
-
-                </div>
-            </details>
-
-            <details class="project">
-                <summary>
-                    Corporate Communications Intern • Light Rail Manila Corporation • 2018 – 2019
-                </summary>
-
-                <div class="dropdown-content">
-
-                    <p>
-                        Assisted with corporate communications,
-                        administrative coordination,
-                        documentation, internal communications,
-                        event planning, and media coverage.
-                    </p>
-
-                    <p>
-                        Supported public relations activities,
-                        content production,
-                        and organizational communications workflows.
-                    </p>
-
-                </div>
-            </details>
+            </div>
 
         </section>
 
         <!-- EDUCATION -->
-        <section id="education">
+        <section id="education" class="row">
 
-            <h2>Education</h2>
+            <h2 class="label">Education</h2>
 
-            <details class="project">
-                <summary>
-                    Lyceum of the Philippines University - Cavite
-                </summary>
+            <div class="content entries">
 
-                <div class="dropdown-content">
-
-                    <p>
-                        Bachelor of Arts in Communication,
-                        Major in Broadcasting • 2016 – 2019
-                    </p>
-
-                    <div class="tags">
-                        <span>Public Relations Officer</span>
-                        <span>Technical Director</span>
-                        <span>Creatives Committee</span>
-                        <span>Student Government</span>
+                <details class="entry">
+                    <summary>
+                        <span class="entry-years">2016 – 2019</span>
+                        <span class="entry-title">BA Communication, Broadcasting</span>
+                        <span class="entry-org">Lyceum of the Philippines University – Cavite</span>
+                    </summary>
+                    <div class="entry-body">
+                        <p class="stack">Public Relations Officer, Technical Director, Creatives Committee, Student Government</p>
                     </div>
+                </details>
 
-                </div>
-            </details>
-            <details class="project">
-                <summary>
-                    Angelicum Immanuel Montessori - General Trias
-                </summary>
-
-                <div class="dropdown-content">
-
-                    <p>
-                        High School Diploma, STEM Strand • 2012 – 2016
-                    </p>
-
-                </div>
-            </details>
-        </section>
-
-
-        <!-- CONTACT -->
-        <section id="contact">
-
-            <h2>Contact</h2>
-
-            <div class="project">
-
-                <p>
-                    Available now for remote IT support,
-                    MSP service desk,
-                    endpoint management,
-                    and Microsoft 365 roles — contract or full-time.
-                </p>
-
-                <div class="socials">
-
-                    <a href="mailto:lyndon.pascuajr@solcredio.com">
-                        Email
-                    </a>
-
-                    <a href="https://www.upwork.com/freelancers/~018e90d294e8a6b537" target="_blank" rel="noopener">
-                        Upwork
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/" target="_blank" rel="noopener">
-                        LinkedIn
-                    </a>
-
-                    <a href="https://github.com/solcredio-admin" target="_blank" rel="noopener">
-                        GitHub
-                    </a>
-
+                <div class="entry">
+                    <div class="entry-head">
+                        <span class="entry-years">2012 – 2016</span>
+                        <span class="entry-title">High school diploma, STEM strand</span>
+                        <span class="entry-org">Angelicum Immanuel Montessori – General Trias</span>
+                    </div>
                 </div>
 
             </div>
 
         </section>
 
-        <!-- FINAL CTA -->
-        <section class="final-cta">
+        <!-- CONTACT -->
+        <section id="contact" class="row">
 
-            <a href="https://www.upwork.com/freelancers/~018e90d294e8a6b537"
-               target="_blank"
-               rel="noopener"
-               class="button">
-                Hire me
-            </a>
+            <h2 class="label">Contact</h2>
+
+            <div class="content">
+                <p class="statement">
+                    Need another reliable pair of hands on your service desk?
+                    I'm available now for remote contract or full-time work.
+                </p>
+
+                <a class="contact-email" href="mailto:lyndon.pascuajr@solcredio.com?subject=Service%20desk%20opportunity">lyndon.pascuajr@solcredio.com</a>
+
+                <p class="contact-note">
+                    Tell me about your team, your stack and the hours you need covered.
+                    I'm based in the Philippines (GMT+8) and work remotely.
+                </p>
+
+                <p class="links">
+                    <a href="https://www.upwork.com/freelancers/~018e90d294e8a6b537" target="_blank" rel="noopener">Hire me on Upwork</a>
+                    <a href="assets/pascuajr-resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
+                    <a href="https://www.linkedin.com/in/lyndon-pascua-jr-0a8520100/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/solcredio-admin" target="_blank" rel="noopener">GitHub</a>
+                </p>
+            </div>
 
         </section>
 
     </main>
 
     <footer>
-        © 2026 Solcredio - Lyndon Pascua Jr.
+        <span>© 2026 Solcredio</span>
+        <span>General Trias, Cavite, Philippines</span>
     </footer>
-    
-<script>
-    const topbar = document.querySelector('.topbar');
 
-    // Scroll behavior (also runs on load, for reloads mid-page)
-    const updateTopbar = () => topbar.classList.toggle('scrolled', window.scrollY > 80);
-    window.addEventListener('scroll', updateTopbar, { passive: true });
-    updateTopbar();
-
-    // Add opaque when burger is open
-    const menuToggle = document.getElementById('menu-toggle');
-    menuToggle.addEventListener('change', () => {
-        if (menuToggle.checked) {
-            topbar.classList.add('scrolled');
-        } else if (window.scrollY <= 80) {
-            topbar.classList.remove('scrolled');
-        }
-    });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.checked = false;
-            if (window.scrollY <= 80) {
-                topbar.classList.remove('scrolled');
-            }
-        });
-    });
-</script>
-    
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

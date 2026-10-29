@@ -18,7 +18,7 @@ Static single-page portfolio built with plain HTML and CSS - no frameworks, no b
 |---|---|
 | Markup | HTML5 |
 | Styling | CSS3 |
-| Font | Proxima Nova |
+| Font | Newsreader + Hanken Grotesk (self-hosted) |
 | Analytics | Google Analytics (gtag.js) |
 | Hosting | GitHub Pages |
 
@@ -28,7 +28,7 @@ Static single-page portfolio built with plain HTML and CSS - no frameworks, no b
 
 - Full-viewport hero with fade-up entrance animations
 - Topbar transparent on landing, transitions to opaque on scroll
-- CSS-only hamburger menu (no JS) - icon only on mobile, text only on desktop
+- CSS-only hamburger menu on mobile, split navigation on desktop
 - Collapsible experience and education entries via `<details>` / `<summary>`
 - Smooth scroll navigation
 - Google Analytics with resume download and outbound link tracking
@@ -38,109 +38,71 @@ Static single-page portfolio built with plain HTML and CSS - no frameworks, no b
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Deploying with Docker behind Caddy
 
-### Pull the latest image
+`www.solcredio.com` is served by **GitHub Pages**. The Docker image is a second way to host the same site, built by GitHub Actions on every push to `main` and published to `ghcr.io/solcredio-admin/portfolio:latest`.
 
-```bash
-docker pull ghcr.io/solcredio-admin/portfolio:latest
-```
-
-### Create a `compose.yaml` file
-
-```yaml
-services:
-  portfolio:
-    image: ghcr.io/solcredio-admin/portfolio:latest
-    container_name: portfolio
-    restart: unless-stopped
-
-    ports:
-      - "3000:3000"
-
-    # Optional
-    # environment:
-    #   TZ: Asia/Manila
-```
-
-### Start the container
-
-```bash
-docker compose up -d
-```
-
-### Verify it is running
-
-```bash
-docker ps
-```
-
-### Access the application
-
-Open your browser and navigate to:
+Inside the container, **nginx listens on port 80** (`nginx.conf`): clean URLs, a real 404 page, gzip, cache headers, security headers, and a healthcheck. The intended layout is:
 
 ```
-http://YOUR_SERVER_IP:3000
+Browser --HTTPS--> Caddy on the host --HTTP--> 127.0.0.1:3000 --> container :80 (nginx)
 ```
 
-For example:
+### Start or update
 
-```
-http://192.168.1.100:3000
-```
-
----
-
-## 🔄 Updating
-
-Pull the latest image and recreate the container:
+`compose.yaml` in this repo publishes the site on `127.0.0.1:3000` only, so Caddy is the one public entry point.
 
 ```bash
 docker compose pull
 docker compose up -d
+docker compose ps        # STATUS should become "healthy"
+curl -I http://127.0.0.1:3000/
 ```
 
----
+### Caddy (host)
 
-## 🛑 Stopping
+Add or keep a site block like this in your existing Caddyfile. Change only this site's block.
+
+```caddyfile
+www.solcredio.com {
+    header Strict-Transport-Security "max-age=31536000"
+    reverse_proxy 127.0.0.1:3000
+}
+
+solcredio.com {
+    redir https://www.solcredio.com{uri} permanent
+}
+```
+
+nginx already sets `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy` and `Permissions-Policy`, so don't repeat them in Caddy. Validate before reloading:
 
 ```bash
-docker compose down
+caddy validate --config /etc/caddy/Caddyfile
+sudo systemctl reload caddy
 ```
 
----
+### Rollback
 
-## 🌐 Reverse Proxy (Optional)
+Each push overwrites `:latest`, so pin the previous build by digest, which `docker images --digests` shows:
 
-If you're using Caddy, Nginx Proxy Manager, Traefik, or another reverse proxy, point it to:
-
-```
-http://portfolio:3000
+```yaml
+image: ghcr.io/solcredio-admin/portfolio@sha256:<previous-digest>
 ```
 
-or
-
-```
-http://SERVER_IP:3000
-```
-
-You can then expose it with your own domain and HTTPS, for example:
-
-```
-https://portfolio.example.com
-```
+Then run `docker compose up -d` again.
 
 ---
 
 ## Sections
 
-- **Hero** - Full-screen landing with name, tagline, and CTAs
-- **About** - Professional background and what I bring to clients
-- **Experience** - MSP Service Desk Technician, Marketing Head, Photographer, Corporate Communications Intern
+- **Hero** - Name, role, and links to email and the resume
+- **About** - What I do for MSPs, in two short paragraphs
+- **What I take off your plate** - Concrete tasks I handle
+- **Toolkit** - Core systems, RMM/PSA, security, infrastructure, documentation
+- **Experience** - Service Desk Technician, Marketing Head, Photographer, Corporate Communications Intern
+- **Homelab projects** - Omada network, Proxmox lab, TrueNAS server
 - **Education** - Lyceum of the Philippines University – Cavite (BA Communication, Broadcasting)
-- **Tools & Platforms** - Core systems, infrastructure, RMM/PSA tools, documentation, security
-- **Services** - What I'm available for
-- **Contact** - Email, Upwork, LinkedIn, GitHub
+- **Contact** - Email, Upwork, resume, LinkedIn, GitHub
 
 ---
 
@@ -149,15 +111,22 @@ https://portfolio.example.com
 ```
 /
 ├── index.html                  # Main page
-├── style.css                   # All styles
-├── favicon.png                 # Site icon
-├── pascuajr-resume.pdf         # Downloadable resume
-├── robots.txt                  # Crawler instructions
-├── sitemap.xml                 # Sitemap for search engines
+├── 404.html                    # Not-found page (GitHub Pages and nginx both use it)
+├── style.css                   # All styles, including @font-face
+├── assets/
+│   ├── fonts/                  # Self-hosted Newsreader and Hanken Grotesk (woff2, latin)
+│   ├── img/                    # Hero photos (WebP), logo, favicon, touch icon
+│   ├── js/                     # main.js (nav behaviour), analytics.js (GA4 bootstrap)
+│   ├── favicon.png             # Full-size logo, used for social previews
+│   └── pascuajr-resume.pdf     # Downloadable resume
+├── robots.txt / sitemap.xml    # Crawler instructions
 ├── google6b5e421518ff1881.html # Google Search Console verification
-├── CNAME                       # Custom domain config
-└── README.md
+├── CNAME                       # GitHub Pages custom domain
+├── Dockerfile / nginx.conf     # Container image
+└── compose.yaml                # Container deployment
 ```
+
+The page's Content Security Policy is in a `<meta>` tag in `index.html`. If you add a script, font or service from another domain, add that domain to the policy or the browser will block it.
 
 ---
 

@@ -1,5 +1,7 @@
 .git
 .github
+.claude
 .DS_Store
 Dockerfile
+compose.yaml
 README.md
