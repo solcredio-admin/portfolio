@@ -385,11 +385,15 @@ main {
 }
 
 /* the one prominent CTA in the bar: same type, just boxed */
+/* fixed height + flex centering: the font's line box sits high, so padding alone looked off-centre */
 .nav .nav-cta {
-    padding: 5px 14px;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 16px;
+    line-height: 1;
     border: 1px solid currentColor;
     border-radius: 999px;
-    margin: -6px 0;
 }
 
 .nav .nav-cta:hover {
@@ -608,6 +612,11 @@ footer {
 
     .entry-body {
         padding-left: calc(9rem + 20px);
+    }
+
+    /* projects have no dates column: keep the body flush with the title */
+    .entries-untimed .entry-body {
+        padding-left: 0;
     }
 }
 
